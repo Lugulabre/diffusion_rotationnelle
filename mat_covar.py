@@ -1,4 +1,4 @@
-def mat_cov(x,y,z):
+def mat_cov(x, y, z):
     """
     Cette fonction necessite Numpy importe comme np
     Prend comme argument les dictionnaires de coordonnees avec tous les temps
