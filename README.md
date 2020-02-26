@@ -31,5 +31,4 @@ Norme : dicAxe = {t0 : {x : 0.23
 
 ## Autocorrélation rotationnelle
 
-Pour chaque temps thô, calculer la moyenne du produit scalaire de l'axe au temps t avec l'axe au temps t+thô (ce qui revient à calculer le cosinus de l'angle alpha entre les deux axes).# diffusion_rotationnelle
-Projet de dynamique moléculaire
+Pour chaque temps thô, calculer la moyenne du produit scalaire de l'axe au temps t avec l'axe au temps t+thô (ce qui revient à calculer le cosinus de l'angle alpha entre les deux axes).
