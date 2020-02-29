@@ -13,5 +13,5 @@ def mat_cov(x, y, z):
         mat_topline = np.array([cv.covar(x[temp], x[temp]), cv.covar(x[temp], y[temp]), cv.covar(x[temp], z[temp])])
         mat_midline = np.array([cv.covar(y[temp], x[temp]), cv.covar(y[temp], y[temp]), cv.covar(y[temp], z[temp])])
         mat_botline = np.array([cv.covar(z[temp], x[temp]), cv.covar(z[temp], y[temp]), cv.covar(z[temp], z[temp])])
-        mat_dict[temp] = np.array([mat_topline, mat_midline, mat_botline])
+        mat_dict[temp] = np.matrix([mat_topline, mat_midline, mat_botline])
     return mat_dict
