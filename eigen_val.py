@@ -20,7 +20,6 @@ def eig_val(matrix_cov):
 		else:
 			dico_eigval[temp] = -alg.eig(matrix_cov[temp])[1][0]
 		vec_ini = alg.eig(matrix_cov[temp])[1][0]
-	print(type(dico_eigval["t0"]))
 	return dico_eigval
 
 if __name__ == "__main__":

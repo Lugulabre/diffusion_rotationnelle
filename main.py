@@ -1,9 +1,11 @@
 import sys
 
+import autocorr_rot as arot
 import barycenter as bc
 import center as ct
 import covar as cv
 import eigen_val as ev
+import graphique as graph
 import mat_covar as mcv
 import read_data_MDA as rdMDA
 
@@ -17,7 +19,11 @@ center_coord = ct.center(interest[0], interest[1], interest[2], bary_coord)
 #print(center_coord)
 matrice_covar = mcv.mat_cov(center_coord[0], center_coord[1], center_coord[2])
 #print(matrice_covar)
-ev.eig_val(matrice_covar)
+matrice_eigval = ev.eig_val(matrice_covar)
+#print(matrice_eigval)
+matrice_tau = arot.autocorr_rot(matrice_eigval)
+#print(matrice_tau)
+graph.graphique(matrice_tau)
 
 
 
