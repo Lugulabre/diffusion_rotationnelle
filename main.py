@@ -23,7 +23,13 @@ matrice_eigval = ev.eig_val(matrice_covar)
 #print(matrice_eigval)
 matrice_tau = arot.autocorr_rot(matrice_eigval)
 #print(matrice_tau)
-graph.graphique(matrice_tau)
+graph.graphique(matrice_tau, "courbe_autocorr.png", "blue")
+
+matrice_eau = rdMDA.read_h2o(pdb_file[0], pdb_file[1])
+#print(matrice_eau)
+matrice_tau_eau = arot.autocorr_rot(matrice_eau)
+#print(matrice_tau_eau)
+graph.graphique(matrice_tau_eau, "courbe_eau.png", "red")
 
 
 

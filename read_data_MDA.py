@@ -1,5 +1,6 @@
 import MDAnalysis
 from MDAnalysis.tests.datafiles import PDB,XTC
+import numpy as np
 import os
 import sys
 
@@ -37,5 +38,29 @@ def read_data(file_name_pdb, file_name_xtc):
 		range_coor = 0
 
 	return (dictX, dictY, dictZ)
+
+def read_h2o(file_name_pdb, file_name_xtc):
+	u_prot = MDAnalysis.Universe(file_name_pdb, file_name_xtc)
+	oxygene = u_prot.select_atoms("name OW")
+	oxygene = oxygene.indices[203]
+
+	range_time = 0
+
+	dict_eau = {}
+
+	for ts in u_prot.trajectory:
+		x_eau = ts[oxygene+1][0] - ts[oxygene][0]
+		y_eau = ts[oxygene+1][1] - ts[oxygene][1]
+		z_eau = ts[oxygene+1][2] - ts[oxygene][2]
+		dict_eau["t" + str(range_time)] = np.matrix([x_eau, y_eau, z_eau])
+		range_time += 1
+
+	return dict_eau
+
+
+
+
+
+
 
 
