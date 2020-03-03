@@ -32,3 +32,15 @@ Norme : dicAxe = {t0 : {x : 0.23
 ## Autocorrélation rotationnelle
 
 Pour chaque temps thô, calculer la moyenne du produit scalaire de l'axe au temps t avec l'axe au temps t+thô (ce qui revient à calculer le cosinus de l'angle alpha entre les deux axes).
+
+
+Calculer une fonction fittant aux courbes avec scipy et déterminer tau rot (nb la fonction c'est e(- tau / tau rot))
+Pas oublier mail trajectoire 200ns
+Comparer à l'outil gmx rotacf
+Rapport :
+- dire comment on a travaillé
+- justifier les choix de codage
+- comparer à l'outil existant
+- discuter à propos de l'importance de la rotation des molécules
+
+Au cas où, revoir la détermination de cos tau (si la moyenne se fait bien sur toutes les fenêtres)

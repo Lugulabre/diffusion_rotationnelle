@@ -18,6 +18,6 @@ def graphique(corr_dict, file_name, colgraph):
 	for i in range(0,100):
 		xtest.append(i)
 		ytest.append(exp(-i))
-	plt.plot(xtest, ytest,color = "pink" )
+	#plt.plot(xtest, ytest,color = "pink")
 	plt.savefig(file_name)
 	#plt.close()
