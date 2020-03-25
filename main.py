@@ -25,7 +25,7 @@ matrice_tau = arot.autocorr_rot(matrice_eigval)
 #print(matrice_tau)
 graph.graphique(matrice_tau, "courbe_autocorr.png", "blue")
 
-matrice_eau = rdMDA.read_h2o(pdb_file[0], pdb_file[1])
+matrice_eau = rdMDA.read_h2o(pdb_file[2], pdb_file[3])
 #print(matrice_eau)
 matrice_tau_eau = arot.autocorr_rot(matrice_eau)
 #print(matrice_tau_eau)

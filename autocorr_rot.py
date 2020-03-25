@@ -33,6 +33,8 @@ def autocorr_rot(eig_dict):
     Tau va de 0 jusqu'a longueur du dictionnaire-1
     """
     tau_dict = {}
+    print(len(eig_dict))
     for tau in range(0, len(eig_dict)):
         tau_dict[tau] = single_autocorr(eig_dict, tau)
+        print(tau)
     return tau_dict

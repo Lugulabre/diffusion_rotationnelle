@@ -5,11 +5,11 @@ import os
 import sys
 
 def verify_arg(sys_args):
-    if len(sys_args) != 3:
-        exit("ERROR: NEEDS 2 FILE AS ARGUMENT")
+    if len(sys_args) != 5:
+        exit("ERROR: NEEDS 4 FILE AS ARGUMENT")
     if (os.path.exists(sys_args[1]) == False) | (os.path.exists(sys_args[2]) == False):
         exit("ERROR: FILE DOES NOT EXIST")
-    return sys_args[1:3]
+    return sys_args[1:5]
 
 def read_data(file_name_pdb, file_name_xtc):
 	u_prot = MDAnalysis.Universe(file_name_pdb, file_name_xtc)
