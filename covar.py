@@ -1,7 +1,7 @@
 def covar(a, b):
     """
-    prend en argument 2 dictionnaires de coordonnees pour 1 temps
-    et renvoit la covariance (variance si la meme est fournit 2 fois)
+    Prend en argument 2 dictionnaires de coordonnees pour 1 temps
+    et renvoie la covariance (variance si la meme est fourni 2 fois)
     Exemple: covar(x['t0'], y['t0'])
     Cette fonction recalcule les moyennes obtenues apres centrage
     A revoir: si on divise par n ou n-1

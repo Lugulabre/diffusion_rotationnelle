@@ -5,7 +5,7 @@ import covar as cv
 def mat_cov(x, y, z):
     """
     Cette fonction necessite Numpy importe comme np
-    Prend comme argument les dictionnaires de coordonnees avec tous les temps
+    Prend comme argument les dictionnaires de coordonnees à chaque pas de temps
     """
     mat_dict = {}
     for i in range(0, len(x)):

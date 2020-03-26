@@ -44,3 +44,5 @@ Rapport :
 - discuter à propos de l'importance de la rotation des molécules
 
 Au cas où, revoir la détermination de cos tau (si la moyenne se fait bien sur toutes les fenêtres)
+
+https://lism.cnrs-mrs.fr/JS_files/Page_JP/BiointJP/sfp2_iiia_classificationmouvements.pdf

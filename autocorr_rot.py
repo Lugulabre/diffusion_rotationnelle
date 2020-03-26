@@ -2,8 +2,8 @@ import numpy as np
 
 def cos_tau(vect_eig1, vect_eig2):
     """
-    Fonction prend en argument 2 vecteurs propres de dim 3
-    Elle renvoit le cosinus de leur angle
+    Fonction qui prend en argument 2 vecteurs propres de dim 3
+    Elle renvoie le cosinus de leur angle
     Necessite: import numpy as np
     """
     vect_eig1 = np.array(vect_eig1)[0]
@@ -14,7 +14,7 @@ def single_autocorr(eig_dict, tau):
     """
     Fonction qui prend en argument un dictionnaire de vect propres et un tau
     Tau correspond au decalage pour le calcul de l'autocorrelation
-    La fonction retourne la moyenne des cosinus formes par les vecteurs aux temps
+    La fonction retourne la moyenne des cosinus formés par les vecteurs aux temps
     t et t+tau
     """
     if tau >= len(eig_dict):
@@ -33,8 +33,8 @@ def autocorr_rot(eig_dict):
     Tau va de 0 jusqu'a longueur du dictionnaire-1
     """
     tau_dict = {}
-    print(len(eig_dict))
     for tau in range(0, len(eig_dict)):
         tau_dict[tau] = single_autocorr(eig_dict, tau)
+        #Compteur pour suivre le programme (facultatif)
         print(tau)
     return tau_dict
